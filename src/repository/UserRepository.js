@@ -1,4 +1,4 @@
-import { openNotification } from '~/utilities/notification-helpers';
+import { openNotification } from '../helpers/OpenNotification';
 import Repository, { baseUrl } from './Repository';
 
 class UserRepository {

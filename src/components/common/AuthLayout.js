@@ -1,5 +1,6 @@
 import React from 'react';
 import {
+    FileOutlined,
     MenuFoldOutlined,
     MenuUnfoldOutlined,
     UploadOutlined,
@@ -9,6 +10,7 @@ import {
 import { Breadcrumb, Button, Layout, Menu, theme } from 'antd';
 import { useLocation, useNavigate } from "react-router-dom";
 import { useState } from 'react';
+import { UserRoute } from '../../helpers/Constants';
 const { Header, Sider, Content } = Layout;
 
 const AuthLayout = (props) => {
@@ -30,17 +32,22 @@ const AuthLayout = (props) => {
                         {
                             icon: <UserOutlined />,
                             label: 'Dashboard',
-                            key: "/"
+                            key: UserRoute.dashborad
                         },
                         {
                             icon: <VideoCameraOutlined />,
                             label: 'Events',
-                            key: "/events"
+                            key: UserRoute.events
                         },
                         {
                             icon: <UploadOutlined />,
                             label: 'Artists',
-                            key: "/artists"
+                            key: UserRoute.artists
+                        },
+                        {
+                            icon: <FileOutlined />,
+                            label: 'Contracts',
+                            key: UserRoute.contacts
                         },
                     ]}
                 />
